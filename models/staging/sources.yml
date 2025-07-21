@@ -1,0 +1,48 @@
+version: 2
+
+sources:
+  - name: ga4
+    database: bigquery-public-data
+    schema: ga4_obfuscated_sample_ecommerce
+
+    tables:
+      - name: events
+        identifier: events_20210131
+        description: "GA4 event data for January 31, 2021"
+
+        columns:
+          - name: user_pseudo_id
+            description: "Anonymous identifier for a user"
+            tests:
+              - not_null
+
+          - name: event_name
+            description: "Name of the GA4 event (e.g., page_view, purchase)"
+            tests:
+              - not_null
+              - accepted_values:
+                  values:
+                    [
+                      "page_view",
+                      "add_to_cart",
+                      "purchase",
+                      "session_start",
+                      "first_visit",
+                    ]
+
+          - name: event_timestamp
+            description: "Timestamp when the event occurred"
+            tests:
+              - not_null
+
+          - name: device_category
+            description: "Device type: mobile, tablet, desktop"
+
+          - name: country
+            description: "User's country from IP geo-lookup"
+
+          - name: traffic_source
+            description: "Traffic source name (e.g., google, direct)"
+
+          - name: event_value
+            description: "Custom value passed with the event"
