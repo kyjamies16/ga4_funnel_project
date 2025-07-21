@@ -8,7 +8,7 @@ flattened AS (
     user_pseudo_id,
     event_name,
     TIMESTAMP_MICROS(event_timestamp) AS event_timestamp,
-    {{ dbt_utils.generate_surrogate_key(['user_pseudo_id','event_timestamp','event_name']) }} AS event_id
+    
 
     -- Nested fields
     device.category AS device_category,

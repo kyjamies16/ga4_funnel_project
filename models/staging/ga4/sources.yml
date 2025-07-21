@@ -23,11 +23,22 @@ sources:
               - accepted_values:
                   values:
                     [
-                      "page_view",
+                      "add_payment_info",
+                      "add_shipping_info",
                       "add_to_cart",
-                      "purchase",
-                      "session_start",
+                      "begin_checkout",
+                      "click",
                       "first_visit",
+                      "page_view",
+                      "purchase",
+                      "scroll",
+                      "select_item",
+                      "select_promotion",
+                      "session_start",
+                      "user_engagement",
+                      "view_item",
+                      "view_promotion",
+                      "view_search_results",
                     ]
 
           - name: event_timestamp
