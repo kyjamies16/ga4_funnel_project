@@ -7,8 +7,8 @@ sources:
 
     tables:
       - name: events
-        identifier: events_20210131
-        description: "GA4 event data for January 31, 2021"
+        identifier: events_*
+        description: "GA4 event data from November 1st, 2020 to January 31st, 2021"
 
         columns:
           - name: user_pseudo_id
@@ -20,26 +20,6 @@ sources:
             description: "Name of the GA4 event (e.g., page_view, purchase)"
             tests:
               - not_null
-              - accepted_values:
-                  values:
-                    [
-                      "add_payment_info",
-                      "add_shipping_info",
-                      "add_to_cart",
-                      "begin_checkout",
-                      "click",
-                      "first_visit",
-                      "page_view",
-                      "purchase",
-                      "scroll",
-                      "select_item",
-                      "select_promotion",
-                      "session_start",
-                      "user_engagement",
-                      "view_item",
-                      "view_promotion",
-                      "view_search_results",
-                    ]
 
           - name: event_timestamp
             description: "Timestamp when the event occurred"

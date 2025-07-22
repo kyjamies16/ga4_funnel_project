@@ -18,6 +18,9 @@ models:
     staging:
       +materialized: view
 
+    dim:
+      +materialized: table
+
     intermediate:
       +materialized: view
 
