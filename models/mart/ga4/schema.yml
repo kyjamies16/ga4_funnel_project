@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: fct_sessions
+    description: Final session-level fact table for Power BI analysis.
+    columns:
+      - name: session_id
+        tests:
+          - not_null
+          - unique
+      - name: session_value
+        description: Total value of all ecommerce activity in the session.
+      - name: user_pseudo_id
+        tests:
+          - not_null
+
+  - name: fct_ecommerce_events
+    description: Fact table for ecommerce funnel and product analysis.
+    columns:
+      - name: event_name
+        tests:
+          - not_null
+          - accepted_values:
+              values: ["view_item", "add_to_cart", "purchase"]
+      - name: session_id
+        tests:
+          - not_null
+      - name: item_name
+      - name: quantity
+
+  - name: dim_users
+    description: User dimension table derived from distinct GA4 user pseudonyms.
+    columns:
+      - name: user_pseudo_id
+        tests:
+          - not_null
+          - unique
