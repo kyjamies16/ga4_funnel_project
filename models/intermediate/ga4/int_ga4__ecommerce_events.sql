@@ -1,4 +1,5 @@
 SELECT
+  session_id, 
   user_pseudo_id,
   event_name,
   item_name,
