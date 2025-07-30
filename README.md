@@ -33,7 +33,7 @@ This project was developed to:
 <img width="1707" height="969" alt="image" src="https://github.com/user-attachments/assets/7d183b6f-4e37-4821-b58f-a12dbf5ad31f" />
 
 
-🔗 **[View the Live Dashboard](eyJrIjoiMTQxY2U4YTctMmNjZC00MWI4LThkOTEtODA2Y2U5ODE3M2E0IiwidCI6IjY3MDFlY2Y3LTMyZWUtNDZlZS05ZDViLTEzODVlMjc3MmRjZiJ9)**  
+🔗 **[View the Live Dashboard](https://app.powerbi.com/view?r=eyJrIjoiMTQxY2U4YTctMmNjZC00MWI4LThkOTEtODA2Y2U5ODE3M2E0IiwidCI6IjY3MDFlY2Y3LTMyZWUtNDZlZS05ZDViLTEzODVlMjc3MmRjZiJ9&pageName=44360edfa525006ce83d)**  
 
 ---
 
